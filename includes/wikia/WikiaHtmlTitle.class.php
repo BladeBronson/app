@@ -5,12 +5,7 @@
  */
 class WikiaHtmlTitle {
 
-	/**
-	 * @var string - The separator used to separate parts of the HTML title
-	 *
-	 * Note there is a logic that guesses the separator from a MediaWiki message <pagetitle>
-	 * This logic might be removed later for consistency and simplicity (see the file below)
-	 */
+	/** @var string - The separator used to separate parts of the HTML title */
 	private $separator = ' - ';
 
 	/** @var array - Configurable parts of the title */
@@ -38,16 +33,6 @@ class WikiaHtmlTitle {
 		if ( WikiaPageType::isWikiaHomePage() ) {
 			$this->siteName = null;
 		}
-
-		// Compatibility mode: extract the wiki title from <pagetitle> MW message
-		// Remove later
-		$pageTitleTemplate = wfMessage( 'pagetitle' )->inContentLanguage()->text();
-
-		if (preg_match( '/^\\$1( \\W )(.*)$/u', $pageTitleTemplate, $m ) ) {
-			$this->separator = $m[1];
-			$this->siteName = $m[2];
-		}
-		// End of compatibility mode
 	}
 
 	/**
