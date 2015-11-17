@@ -1049,7 +1049,6 @@ class Preferences {
 		if ( $wgVectorUseSimpleSearch ) {
 			$defaultPreferences['vector-simplesearch'] = array(
 				'type' => 'toggle',
-				'label-message' => 'vector-simplesearch-preference',
 				'section' => 'searchoptions/displaysearchoptions'
 			);
 		}
