@@ -1016,7 +1016,7 @@ class Preferences {
 	 * @param $defaultPreferences Array
 	 */
 	static function searchPreferences( $user, IContextSource $context, &$defaultPreferences ) {
-		global $wgContLang, $wgEnableMWSuggest, $wgVectorUseSimpleSearch;
+		global $wgContLang, $wgEnableMWSuggest;
 
 		## Search #####################################
 		$defaultPreferences['searchlimit'] = array(
@@ -1043,13 +1043,6 @@ class Preferences {
 				'type' => 'toggle',
 				'label-message' => 'mwsuggest-disable',
 				'section' => 'searchoptions/display',
-			);
-		}
-
-		if ( $wgVectorUseSimpleSearch ) {
-			$defaultPreferences['vector-simplesearch'] = array(
-				'type' => 'toggle',
-				'section' => 'searchoptions/displaysearchoptions'
 			);
 		}
 
