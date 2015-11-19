@@ -687,7 +687,6 @@ $wgSkipOldSkins = array(
 		'modern',
 		'myskin',
 		'simple',
-		'standard',
 );
 
 /**
