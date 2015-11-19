@@ -98,6 +98,11 @@ define('ext.wikia.adEngine.adContext', [
 				context.targeting.pageType === 'article';
 		}
 
+		// Evolve2 integration
+		if (context.providers.evolve2) {
+			context.providers.evolve2 = geo.isProperGeo(instantGlobals.wgAdDriverEvolve2Countries);
+		}
+
 		if (geo.isProperGeo(instantGlobals.wgAdDriverTurtleCountries)) {
 			context.providers.turtle = true;
 		}
