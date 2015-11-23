@@ -677,14 +677,6 @@ $wgSkipSkins = array(
 		'campfire',
 		'wikiamobile'
 );
-/**
- * @name wgSkipOldSkins
- *
- * Remove them only from SkinChooser but let use it if in prefs or ?useskin
- */
-$wgSkipOldSkins = array(
-		'myskin',
-);
 
 /**
  * @name $wgBiggestCategoriesBlacklist
