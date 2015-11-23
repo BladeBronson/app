@@ -683,9 +683,7 @@ $wgSkipSkins = array(
  * Remove them only from SkinChooser but let use it if in prefs or ?useskin
  */
 $wgSkipOldSkins = array(
-		'modern',
 		'myskin',
-		'simple',
 );
 
 /**
